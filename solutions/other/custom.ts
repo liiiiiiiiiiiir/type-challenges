@@ -19,3 +19,6 @@ type GetPromiseTypeValue = GetPromiseType<GetPromiseTypeTest>
 type ReverseArr<T> = T extends [...infer R, infer C] ? [C, ...ReverseArr<R>] : T
 type TestArray = [5,4,3,2,1];
 type ReverseArrvALUE = ReverseArr<TestArray>
+
+// 判断数据是否 any 类型
+type IsAny<T> = 1 extends (true & T) ? true : false;
